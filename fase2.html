@@ -6,12 +6,51 @@
     <title>Viking RPG</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-fase="1">
     
+      <div id="tela-jogo">
+ 
+        <div id="cenario"></div>
+ 
+        <div id="hud">
+            <div class="hud-bloco">
+                <span class="hud-nome">⚔ ASTRID</span>
+                <div class="barra-vida-fundo">
+                    <div class="barra-vida-fill" id="vida-fill-jogador"></div>
+                </div>
+                <span class="hud-texto-vida" id="texto-vida-jogador">100 / 100</span>
+            </div>
+ 
+            <div class="hud-bloco inimigo">
+                <span class="hud-nome" id="nome-inimigo">ESPIÃO ☠</span>
+                <div class="barra-vida-fundo">
+                    <div class="barra-vida-fill" id="vida-fill-inimigo"></div>
+                </div>
+                <span class="hud-texto-vida" id="texto-vida-inimigo"></span>
+            </div>
+        </div>
+ 
+        <div id="arena">
+            <img id="sprite-jogador" class="sprite" src="asets/img/viking_woman_pose_1.png" alt="jogador">
+            <img id="sprite-inimigo" class="sprite" src="asets/img/viking_pose_1.png" alt="inimigo">
+        </div>
+ 
+        <div id="caixa-dialogo">
+            <div id="texto-dialogo"><span id="cursor-dialogo"></span></div>
+        </div>
+ 
+        <div id="acoes">
+            <button class="btn-acao" id="btnAtacar">⚔ Atacar</button>
+            <button class="btn-acao" id="btnDefender">🛡 Defender</button>
+            <button class="btn-acao vermelho" id="btnFugir">🏃 Fugir</button>
+        </div>
+ 
+    </div>
 
 
+    <script src="js/auth.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/guard.js"></script>
+    <script src="js/batalha.js"></script>
 </body>
-<script src="js/auth.js"></script>
-<script src="js/game.js"></script>
-<script src="js/guard.js"></script>
 </html>
