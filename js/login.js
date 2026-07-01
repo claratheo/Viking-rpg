@@ -18,7 +18,7 @@ btnLogin.addEventListener("click", function(event) {
     const resultado = Auth.login(email, senha);
 
     if (resultado.sucesso) {
-        window.location.href = "fase1.html";
+        window.location.href = "bemvindo.html";
     } else {
         mensagem.textContent = resultado.mensagem;
         mensagem.className = "mensagem erro";
