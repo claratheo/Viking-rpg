@@ -32,7 +32,7 @@ const melhorias = [
     },
 ];
 
-// controla quantas vezes cada melhoria foi comprada nessa tela
+
 const compras = { vida: 0, arma: 0, armadura: 0 };
 
 function atualizarPontos() {
@@ -77,7 +77,7 @@ function comprarMelhoria(melhoria) {
     compras[melhoria.chave]++;
     textoResumo.style.color = "#e8dcc8";
 
-    // re-renderiza os cards para atualizar o contador de compras
+  
     renderizarMelhorias();
     atualizarPontos();
 }
@@ -85,7 +85,7 @@ function comprarMelhoria(melhoria) {
 btnConfirmar.addEventListener("click", function() {
     salvarEstado();
 
-    // descobre qual é a próxima fase pelo estado salvo
+    
     const faseAtual = Number(localStorage.getItem("faseAtual") || "0");
     const proximaFase = faseAtual + 1;
     localStorage.setItem("faseAtual", proximaFase);
@@ -93,7 +93,7 @@ btnConfirmar.addEventListener("click", function() {
     window.location.href = `fase${proximaFase + 1}.html`;
 });
 
-// ── INICIALIZAÇÃO ──
+
 (function init() {
     carregarEstado();
     atualizarPontos();

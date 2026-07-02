@@ -1,6 +1,6 @@
 "use strict";
 
-// ── ESTADO DO JOGADOR ──
+
 const jogador = {
     nome: "",
     pontos: 10,
@@ -10,7 +10,7 @@ const jogador = {
     armadura: { nome: "", custo: 0, defesa: 0 },
 };
 
-// ── CATÁLOGOS ──
+
 const armas = {
     1: { nome: "Espada",      custo: 5, dano: 8, imagem: "asets/img/arma_espada.png" },
     2: { nome: "Arco e flecha", custo: 7, dano: 16, imagem: "asets/img/arma_arco.png" },
@@ -23,7 +23,7 @@ const armaduras = {
     3: { nome: "Armadura de aço",   custo: 6, defesa: 6, imagem: "asets/img/armadura_aco.png" },
 };
 
-// ── CONFIGURAÇÃO DAS FASES ──
+
 const fases = [
     {
         nome: "Bandidos",
@@ -54,15 +54,12 @@ const fases = [
     },
 ];
 
-// ── ESTADO DA BATALHA ATUAL ──
-// Fica aqui para fase1.js, fase2.js e fase3.js acessarem
 let inimigoBatalha = null;
 let defesaInimigoTurno = 0;
 let defesaJogadorTurno = 0;
 let tentativasFugaRestantes = 0;
 
-// ── INICIAR BATALHA ──
-// Chamado pelo faseX.js ao carregar a página
+
 function iniciarBatalha(indiceFase) {
     const fase = fases[indiceFase];
     inimigoBatalha = { ...fase.inimigo }; // cópia para não mutar a config
@@ -78,8 +75,7 @@ function iniciarBatalha(indiceFase) {
     };
 }
 
-// ── AÇÃO: ATACAR ──
-// Retorna um objeto descrevendo o que aconteceu — faseX.js decide como mostrar
+
 function atacar(indiceFase) {
     const fase = fases[indiceFase];
     let dano = jogador.arma.dano;
@@ -105,7 +101,7 @@ function atacar(indiceFase) {
     };
 }
 
-// ── AÇÃO: DEFENDER ──
+
 function defender() {
     defesaJogadorTurno = 2;
     return {
@@ -113,7 +109,7 @@ function defender() {
     };
 }
 
-// ── AÇÃO: FUGIR ──
+
 function tentarFugir(indiceFase) {
     const fase = fases[indiceFase];
     const sucesso = Math.random() < fase.fuga.chanceSucesso;
@@ -130,17 +126,16 @@ function tentarFugir(indiceFase) {
     return { fugiu: false, tentativasRestantes: 0, mensagem: "Você falhou em fugir! Prepare-se." };
 }
 
-// ── TURNO DO INIMIGO ──
-// Chamado pelo faseX.js após cada ação do jogador
+
 function turnoInimigo(indiceFase) {
     const fase = fases[indiceFase];
     const rolagem = Math.floor(Math.random() * 100);
 
-    // reseta defesa do jogador após o turno
+    
     const defesaAtual = defesaJogadorTurno;
     defesaJogadorTurno = 0;
 
-    // crítico (só chefe)
+    
     if (fase.inimigoCritico && rolagem > fase.inimigoCritico.chanceAcimaDe) {
         const dano = Math.max(0, inimigoBatalha.dano * fase.inimigoCritico.multiplicador - (jogador.armadura.defesa + defesaAtual));
         jogador.vida -= dano;
@@ -175,7 +170,7 @@ function turnoInimigo(indiceFase) {
         };
     }
 
-    // inimigo defende
+    
     defesaInimigoTurno = 2;
     return {
         tipo: "defendeu",

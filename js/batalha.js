@@ -1,10 +1,9 @@
 "use strict";
 
-// ── DETECTA QUAL FASE É ESSA ──
 const indiceFase = Number(document.body.dataset.fase);
 const fase = fases[indiceFase];
 
-// ── ELEMENTOS DA TELA ──
+
 const textoDialogo     = document.querySelector("#texto-dialogo");
 const vidaFillJogador  = document.querySelector("#vida-fill-jogador");
 const vidaFillInimigo  = document.querySelector("#vida-fill-inimigo");
@@ -18,7 +17,7 @@ const btnDefender      = document.querySelector("#btnDefender");
 const btnFugir         = document.querySelector("#btnFugir");
 const telaJogo         = document.querySelector("#tela-jogo");
 
-// ── FUNÇÕES DE UI ──
+
 function setDialogo(texto) {
     textoDialogo.innerHTML = texto + '<span id="cursor-dialogo"></span>';
 }
@@ -64,7 +63,7 @@ function habilitarBotoes() {
     btnFugir.disabled   = false;
 }
 
-// ── LABEL DO BOTÃO ATACAR MUDA POR FASE ──
+
 function configurarBotaoAtaque() {
     if (fase.ataqueEspecial?.tipo === "furtivo") {
         btnAtacar.textContent = "⚔ Ataque Furtivo";
@@ -75,7 +74,7 @@ function configurarBotaoAtaque() {
     }
 }
 
-// ── FIM DE JOGO ──
+
 function encerrarVitoria() {
     desabilitarBotoes();
     jogador.pontos += fase.recompensa;
@@ -95,7 +94,6 @@ function encerrarDerrota() {
     }, 1500);
 }
 
-// ── TURNO DO INIMIGO (com delay para parecer animado) ──
 function executarTurnoInimigo() {
     desabilitarBotoes();
 
@@ -119,7 +117,7 @@ function executarTurnoInimigo() {
     }, 1000);
 }
 
-// ── EVENTOS DOS BOTÕES ──
+
 btnAtacar.addEventListener("click", function() {
     desabilitarBotoes();
 
@@ -166,22 +164,22 @@ btnFugir.addEventListener("click", function() {
     executarTurnoInimigo();
 });
 
-// ── INICIALIZAÇÃO ──
+
 (function init() {
     carregarEstado();
 
     const dados = iniciarBatalha(indiceFase);
 
-    // atualiza nome do inimigo no HUD
+    
     nomeInimigoHud.textContent = dados.nomeInimigo + " ☠";
 
-    // atualiza barras de vida
+  
     atualizarVidaJogador();
     atualizarVidaInimigo(dados.vidaInimigo, dados.vidaInimigo);
 
-    // configura label do botão de ataque
+    
     configurarBotaoAtaque();
 
-    // mostra introdução da fase
+   
     setDialogo(dados.introducao);
 })();

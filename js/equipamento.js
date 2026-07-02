@@ -9,7 +9,7 @@ const btnConfirmar      = document.querySelector("#btnConfirmar");
 let armaSelecionada     = null;
 let armaduraSelecionada = null;
 
-// ── RENDERIZA OS CARDS ──
+
 function renderizarCards(catalogo, container, tipo) {
     Object.entries(catalogo).forEach(function([id, item]) {
         const card = document.createElement("div");
@@ -39,7 +39,7 @@ function renderizarCards(catalogo, container, tipo) {
 }
 
 function selecionarEquipamento(tipo, id, item, cardClicado, container) {
-    // verifica se tem pontos suficientes
+    
     const outroCusto = tipo === "arma"
         ? (armaduraSelecionada?.custo || 0)
         : (armaSelecionada?.custo || 0);
@@ -56,7 +56,7 @@ function selecionarEquipamento(tipo, id, item, cardClicado, container) {
         return;
     }
 
-    // remove seleção anterior
+    
     container.querySelectorAll(".card-equipamento").forEach(function(c) {
         c.classList.remove("selecionado");
     });
@@ -87,7 +87,7 @@ function atualizarResumo() {
     btnConfirmar.disabled = !(armaSelecionada && armaduraSelecionada);
 }
 
-// ── CONFIRMAR E IR PARA A FASE 1 ──
+
 btnConfirmar.addEventListener("click", function() {
     jogador.arma     = armaSelecionada;
     jogador.armadura = armaduraSelecionada;
@@ -96,7 +96,7 @@ btnConfirmar.addEventListener("click", function() {
     window.location.href = "fase1.html";
 });
 
-// ── INICIALIZAÇÃO ──
+
 (function init() {
     carregarEstado();
     pontosDisponiveis.textContent = jogador.pontos;
