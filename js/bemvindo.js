@@ -9,7 +9,7 @@ const sessao = Auth.getSessao();
 nomeJogador.textContent = sessao.nome + "!";
 
 btnComecar.addEventListener("click", function() {
-    window.location.href = "fase1.html";
+    window.location.href = "equipamento.html";
 });
 
 btnLogout.addEventListener("click", function() {

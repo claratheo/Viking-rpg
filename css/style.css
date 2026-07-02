@@ -327,3 +327,120 @@ a { color: #ecebfd; }
     line-height: 2;
 }
  
+
+#tela-equipamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: url('../asets/img/fundo-batalha.jpg') center/cover no-repeat;
+}
+ 
+.titulo-equipamento {
+    font-size: 10px;
+    color: var(--cor-destaque);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #000;
+    text-align: center;
+}
+ 
+.subtitulo-equipamento {
+    font-size: 7px;
+    color: var(--cor-texto);
+    text-shadow: 1px 1px 0 #000;
+}
+ 
+.secao-equipamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+}
+ 
+.titulo-secao {
+    font-size: 8px;
+    color: var(--cor-borda);
+    letter-spacing: 1px;
+}
+ 
+.grade-equipamento {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ 
+.card-equipamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 180px;
+    background: var(--cor-fundo-ui);
+    border: 2px solid var(--cor-borda);
+    padding: 20px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.1s;
+}
+ 
+.card-equipamento:hover {
+    border-color: var(--cor-destaque);
+    transform: translateY(-3px);
+}
+ 
+.card-equipamento.selecionado {
+    border-color: var(--cor-destaque);
+    background: rgba(201, 148, 58, 0.15);
+}
+ 
+.card-nome {
+    font-size: 7px;
+    color: var(--cor-destaque);
+    text-align: center;
+    letter-spacing: 1px;
+}
+ 
+.card-stat {
+    font-size: 6px;
+    color: #6bff8e;
+}
+ 
+.card-custo {
+    font-size: 6px;
+    color: var(--cor-texto);
+}
+ 
+.btn-selecionar {
+    font-size: 6px;
+    padding: 6px 12px;
+    min-width: auto;
+}
+ 
+#resumo-escolha {
+    background: var(--cor-fundo-ui);
+    border: 1px solid var(--cor-borda);
+    padding: 12px 24px;
+    max-width: 600px;
+    text-align: center;
+}
+ 
+#texto-resumo {
+    font-size: 6px;
+    color: var(--cor-texto);
+    line-height: 2;
+}
+ 
+#btnConfirmar {
+    font-size: 8px;
+    padding: 14px 32px;
+}
+ 
+#btnConfirmar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+}

@@ -186,8 +186,6 @@ function turnoInimigo(indiceFase) {
     };
 }
 
-// ── SALVAR E CARREGAR ESTADO NO LOCALSTORAGE ──
-// Necessário para passar o estado do jogador entre as fases
 function salvarEstado() {
     localStorage.setItem("estadoJogo", JSON.stringify(jogador));
 }
