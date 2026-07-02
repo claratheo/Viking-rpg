@@ -18,6 +18,9 @@ btnLogin.addEventListener("click", function(event) {
     const resultado = Auth.login(email, senha);
 
     if (resultado.sucesso) {
+        localStorage.removeItem("estadoJogo");
+localStorage.removeItem("faseAtual");
+
         window.location.href = "bemvindo.html";
     } else {
         mensagem.textContent = resultado.mensagem;
