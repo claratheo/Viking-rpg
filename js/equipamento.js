@@ -18,14 +18,16 @@ function renderizarCards(catalogo, container, tipo) {
         card.dataset.tipo = tipo;
 
         const stat = tipo === "arma"
-            ? `⚔ Dano: ${item.dano}`
-            : `🛡 Defesa: ${item.defesa}`;
+            ? `Dano: ${item.dano}`
+            : `Defesa: ${item.defesa}`;
 
         card.innerHTML = `
-            <p class="card-nome">${item.nome}</p>
-            <p class="card-stat">${stat}</p>
-            <p class="card-custo">💰 Custo: ${item.custo} pts</p>
-            <button class="btn-acao btn-selecionar">Escolher</button>
+             <img class="card-imagem" src="${item.imagem}" alt="${item.nome}">
+    <p class="card-nome">${item.nome}</p>
+    <p class="card-stat">${stat}</p>
+    <p class="card-custo">💰 Custo: ${item.custo} pts</p>
+    <button class="btn-acao btn-selecionar">Escolher</button> 
+
         `;
 
         card.querySelector(".btn-selecionar").addEventListener("click", function() {

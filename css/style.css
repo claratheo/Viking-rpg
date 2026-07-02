@@ -335,7 +335,7 @@ a { color: #ecebfd; }
     gap: 24px;
     min-height: 100vh;
     padding: 40px 20px;
-    background: url('../asets/img/fundo-batalha.jpg') center/cover no-repeat;
+    background: url('asets/img/fundo-batalha.jpg') center/cover no-repeat;
 }
  
 .titulo-equipamento {
@@ -443,4 +443,10 @@ a { color: #ecebfd; }
     opacity: 0.4;
     cursor: not-allowed;
     transform: none;
+}
+
+.card-imagem {
+    width: 64px;
+    height: auto;
+    image-rendering: pixelated;
 }

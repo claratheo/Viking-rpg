@@ -12,15 +12,15 @@ const jogador = {
 
 // ── CATÁLOGOS ──
 const armas = {
-    1: { nome: "Espada",      custo: 5, dano: 8  },
-    2: { nome: "Arco e flecha", custo: 7, dano: 16 },
-    3: { nome: "Adaga",       custo: 3, dano: 4  },
+    1: { nome: "Espada",      custo: 5, dano: 8, imagem: "asets/img/arma_espada.png" },
+    2: { nome: "Arco e flecha", custo: 7, dano: 16, imagem: "asets/img/arma_arco.png" },
+    3: { nome: "Adaga",       custo: 3, dano: 4, imagem: "asets/img/arma_adaga.png" },
 };
 
 const armaduras = {
-    1: { nome: "Armadura de couro", custo: 2, defesa: 2 },
-    2: { nome: "Armadura de ferro", custo: 4, defesa: 4 },
-    3: { nome: "Armadura de aço",   custo: 6, defesa: 6 },
+    1: { nome: "Armadura de couro", custo: 2, defesa: 2, imagem: "asets/img/armadura_couro.png" },
+    2: { nome: "Armadura de ferro", custo: 4, defesa: 4, imagem: "asets/img/armadura_ferro.png" },
+    3: { nome: "Armadura de aço",   custo: 6, defesa: 6, imagem: "asets/img/armadura_aco.png" },
 };
 
 // ── CONFIGURAÇÃO DAS FASES ──
