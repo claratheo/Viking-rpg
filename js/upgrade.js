@@ -10,7 +10,7 @@ const melhorias = [
         chave: "vida",
         nome: "Poção de Vida",
         descricao: "Aumenta 20 pontos de vida",
-        icone: "❤️",
+        icone: "",
         custo: 10,
         aplicar: function() { jogador.vida += 20; jogador.vidaMaxima += 20; }
     },
@@ -18,7 +18,7 @@ const melhorias = [
         chave: "arma",
         nome: "Afiar Arma",
         descricao: "Aumenta o dano em 5 pontos",
-        icone: "⚔️",
+        icone: "",
         custo: 12,
         aplicar: function() { jogador.arma.dano += 5; }
     },
@@ -26,7 +26,7 @@ const melhorias = [
         chave: "armadura",
         nome: "Reforçar Armadura",
         descricao: "Aumenta a defesa em 3 pontos",
-        icone: "🛡️",
+        icone: "",
         custo: 12,
         aplicar: function() { jogador.armadura.defesa += 3; }
     },
@@ -52,8 +52,7 @@ function renderizarMelhorias() {
         card.innerHTML = `
             <p class="card-nome">${melhoria.icone} ${melhoria.nome}</p>
             <p class="card-stat">${melhoria.descricao}</p>
-            <p class="card-custo">💰 Custo: ${melhoria.custo} pts</p>
-            ${vezesComprado > 0 ? `<p class="card-comprado">✔ Comprado ${vezesComprado}x</p>` : ""}
+            <p class="card-custo"> Custo: ${melhoria.custo} pts</p>
             <button class="btn-acao btn-selecionar" id="btn-${melhoria.chave}">Comprar</button>
         `;
 

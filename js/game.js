@@ -27,7 +27,7 @@ const armaduras = {
 const fases = [
     {
         nome: "Bandidos",
-        introducao: "Você está caminhando pela floresta quando de repente é atacado por um grupo de bandidos!",
+        introducao: "Você está caminhando pela floresta, fazendo sua ronda pela floresta de sua vila, quando de repente é atacado por um bandido!",
         inimigo: { vida: 30, dano: 10, defesa: 2 },
         recompensa: 24,
         fuga: { tentativas: 1, chanceSucesso: 0.5 },
@@ -36,7 +36,7 @@ const fases = [
     },
     {
         nome: "Espião",
-        introducao: "Durante sua vigia na floresta, você se encontra com um guerreiro espião de outra vila!",
+        introducao: "Após derrotar seu último inimigo, você continua sua vigia na floresta, até que, escondido, você encontra um espião da vila inimiga! (bônus de ataque furtivo)",
         inimigo: { vida: 60, dano: 12, defesa: 4 },
         recompensa: 30,
         fuga: { tentativas: 2, chanceSucesso: 0.5 },
@@ -45,7 +45,7 @@ const fases = [
     },
     {
         nome: "Chefe Comandante",
-        introducao: "O Chefe Comandante surge diante de você prestes a incitar uma guerra contra sua vila!",
+        introducao: "O Chefe Comandante, após enviar o espiâo, surge diante de você prestes a incitar uma guerra contra sua vila! Se prepare para a batalha final!",
         inimigo: { vida: 120, dano: 18, defesa: 6 },
         recompensa: 0,
         fuga: { tentativas: 1, chanceSucesso: 0.1 },

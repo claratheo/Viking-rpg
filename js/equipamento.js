@@ -25,7 +25,7 @@ function renderizarCards(catalogo, container, tipo) {
              <img class="card-imagem" src="${item.imagem}" alt="${item.nome}">
     <p class="card-nome">${item.nome}</p>
     <p class="card-stat">${stat}</p>
-    <p class="card-custo">💰 Custo: ${item.custo} pts</p>
+    <p class="card-custo"> Custo: ${item.custo} pts</p>
     <button class="btn-acao btn-selecionar">Escolher</button> 
 
         `;

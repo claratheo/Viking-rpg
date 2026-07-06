@@ -66,11 +66,11 @@ function habilitarBotoes() {
 
 function configurarBotaoAtaque() {
     if (fase.ataqueEspecial?.tipo === "furtivo") {
-        btnAtacar.textContent = "⚔ Ataque Furtivo";
+        btnAtacar.textContent = " Ataque Furtivo";
     } else if (fase.ataqueEspecial?.tipo === "furia") {
-        btnAtacar.textContent = "⚔ Atacar em Fúria";
+        btnAtacar.textContent = " Atacar em Fúria";
     } else {
-        btnAtacar.textContent = "⚔ Atacar";
+        btnAtacar.textContent = " Atacar";
     }
 }
 
