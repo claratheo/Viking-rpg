@@ -74,7 +74,7 @@ body {
 }
 
 .hud-nome {
-    font-size: 7px;
+    font-size: 10px;
     color: var(--cor-destaque);
     letter-spacing: 1px;
     text-shadow: 1px 1px 0px #000;
@@ -100,7 +100,7 @@ body {
 #vida-fill-inimigo  { background: var(--cor-vida-inimigo); width: 100%; }
 
 .hud-texto-vida {
-    font-size: 6px;
+    font-size: 10px;
     color: var(--cor-texto);
     text-shadow: 1px 1px 0 #000;
 }
@@ -149,7 +149,7 @@ body {
 }
  
 #texto-dialogo {
-    font-size: 8px;
+    font-size: 12px;
     color: var(--cor-texto);
     line-height: 1.8;
     letter-spacing: 0.5px;
@@ -186,7 +186,7 @@ body {
  
 .btn-acao {
     font-family: 'Press Start 2P', monospace;
-    font-size: 7px;
+    font-size: 10px;
     color: var(--cor-texto);
     background: var(--cor-botao);
     border: 2px solid var(--cor-borda);
@@ -268,7 +268,7 @@ input {
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
     background: #ecebfd;
     border: none;
     border-radius: 4px;
@@ -339,7 +339,7 @@ a { color: #ecebfd; }
 }
  
 .titulo-equipamento {
-    font-size: 10px;
+    font-size: 12px;
     color: var(--cor-destaque);
     letter-spacing: 2px;
     text-shadow: 2px 2px 0 #000;
@@ -347,7 +347,7 @@ a { color: #ecebfd; }
 }
  
 .subtitulo-equipamento {
-    font-size: 7px;
+    font-size: 9px;
     color: var(--cor-texto);
     text-shadow: 1px 1px 0 #000;
 }
@@ -362,7 +362,7 @@ a { color: #ecebfd; }
 }
  
 .titulo-secao {
-    font-size: 8px;
+    font-size: 10px;
     color: var(--cor-borda);
     letter-spacing: 1px;
 }
@@ -398,24 +398,24 @@ a { color: #ecebfd; }
 }
  
 .card-nome {
-    font-size: 7px;
+    font-size: 9px;
     color: var(--cor-destaque);
     text-align: center;
     letter-spacing: 1px;
 }
  
 .card-stat {
-    font-size: 6px;
+    font-size: 8px;
     color: #6bff8e;
 }
  
 .card-custo {
-    font-size: 6px;
+    font-size: 8px;
     color: var(--cor-texto);
 }
  
 .btn-selecionar {
-    font-size: 6px;
+    font-size: 8px;
     padding: 6px 12px;
     min-width: auto;
 }
@@ -429,13 +429,13 @@ a { color: #ecebfd; }
 }
  
 #texto-resumo {
-    font-size: 6px;
+    font-size: 8px;
     color: var(--cor-texto);
     line-height: 2;
 }
  
 #btnConfirmar {
-    font-size: 8px;
+    font-size: 10px;
     padding: 14px 32px;
 }
  
